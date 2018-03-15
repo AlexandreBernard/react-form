@@ -27,7 +27,7 @@ class SelectWrapper extends Component {
       setTouched
     } = fieldApi;
 
-    const resolvedOptions = options.find(d => d.value === '') ? options : [
+    const resolvedOptions = options.find(d => d.value === '') || placeholder === false ? options : [
       {
         label: placeholder || 'Select One...',
         value: '',
